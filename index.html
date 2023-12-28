@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coords</title>
+</head>
+<body>
+    <div id="lat"></div>
+    <div id="long"></div>
+    <script>
+        
+        navigator.geolocation.getCurrentPosition(success)
+
+        function success(position) {
+            console.log(position)
+            setTimeout(()=> {})
+            document.getElementById('lat').innerHTML = position.coords.latitude
+            document.getElementById('long').innerHTML = position.coords.longitude
+        }
+    </script>
+</body>
+</html>
